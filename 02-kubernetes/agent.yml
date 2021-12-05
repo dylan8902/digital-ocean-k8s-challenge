@@ -97,3 +97,18 @@ spec:
             period: 30s
             ssl.certificate_authorities:
               - /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      - id: 678daef0-3634-11eb-8208-57893829af4f
+        name: system-1
+        revision: 1
+        type: system/metrics
+        data_stream.namespace: default
+        use_output: default
+        streams:
+          - metricset: cpu
+            data_stream.dataset: system.cpu
+          - metricset: memory
+            data_stream.dataset: system.memory
+          - metricset: network
+            data_stream.dataset: system.network
+          - metricset: filesystem
+            data_stream.dataset: system.filesystem

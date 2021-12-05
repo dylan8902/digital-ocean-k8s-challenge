@@ -23,7 +23,7 @@ terraform apply
 ```
 
 
-Followed the instructions from the DO website to get `~/.kube/config` setup using the CLI, which was new to me
+Followed the instructions https://docs.digitalocean.com/products/kubernetes/how-to/connect-to-cluster/ to get `~/.kube/config` setup using the Digital Ocean CLI, which was new to me
 
 ```
 doctl auth init --context dylan8902
@@ -79,3 +79,14 @@ https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-elastic-agent-configura
 ```
 kubectl apply -f agent.yml
 ```
+
+## Conclusion
+
+I got to try a few new things doing this challenge:
+  * `doctl` - the Digital Ocean command-line utility
+  * The latest Elastic operator that supports Elastic agent
+
+
+![Metrics for Kubernetes](https://user-images.githubusercontent.com/150938/144751688-caed6697-61f7-48e4-84b4-49b2c79eb3b4.png)
+
+![Log stream](https://user-images.githubusercontent.com/150938/144751994-c6b57a5b-af34-43eb-a2eb-14e31ca04fec.png)
